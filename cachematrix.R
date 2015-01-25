@@ -18,9 +18,9 @@ cacheSolve <- function(x, ...) {
     message("getting cached data")
     return(m)                         # return m from cache
   }
-                          # if m was null, skip to here and run function for inverse
-  data <- x$get()         # pass x into the variable data
-  m <- solve(data, ...)   # solve data to get the inverse of x
-  x$setinverse(m)         # pass the result into m
-  m                       # print m
+                                      # if m was null, skip to here and run function for inverse
+  data <- x$get()                     # pass x into the variable data
+  m <- solve(data, ...)               # solve data to get the inverse of x
+  x$setinverse(m)                     # pass the result into m
+  m                                   # print m
 }
